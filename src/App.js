@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+
+import Home from './components/Home';
 
 export default class App extends Component 
 {
@@ -10,7 +12,9 @@ export default class App extends Component
             <Router>
                 <div className="App">
                     <header className="App-header">
-                        
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                        </Switch>
                     </header>
                 </div>
             </Router>
