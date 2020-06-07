@@ -5,12 +5,11 @@ export default class DebitCard extends Component
     render()
     {
         return (
-            <section>
-                <h3>{this.props.description}</h3>
-                <ul>
-                    <li>{this.props.amount}</li>
-                    <li>{this.props.id}</li>
-                    <li>{this.props.date}</li>
+            <section className="debit-card">
+                <h3 className="debit-description">{this.props.description}</h3>
+                <ul className="debit-details">
+                    <li>Amount: ${this.props.amount}</li>
+                    <li>Date: {this.props.date}</li>
                 </ul>
             </section>
         );

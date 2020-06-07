@@ -20,7 +20,9 @@ export default class Debits extends Component
                 <Link to="/">Home</Link>
 
                 <AccountBalance accountBalance={this.props.accountBalance} />
-                {this.generateDebitCards(this.props.data)}
+                <section className="debit-card-grid">
+                    {this.generateDebitCards(this.props.data)}
+                </section>
             </div>
         );
     }
