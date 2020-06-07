@@ -20,7 +20,7 @@ export default class Credits extends Component
                 <Link to="/">Home</Link>
 
                 <AccountBalance accountBalance={this.props.accountBalance} />
-                <section>
+                <section className="credit-card-grid">
                     {this.generateCreditCards(this.props.data)}
                 </section>
             </div>

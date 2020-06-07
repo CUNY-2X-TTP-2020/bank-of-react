@@ -5,9 +5,9 @@ export default class CreditCard extends Component
     render()
     {
         return (
-            <section>
-                <h3>{this.props.description}</h3>
-                <ul>
+            <section className="credit-card">
+                <h3 className="credit-description">{this.props.description}</h3>
+                <ul className="credit-details">
                     <li>Amount: ${this.props.amount}</li>
                     <li>Date: {this.props.date}</li>
                 </ul>

@@ -32,9 +32,10 @@ body::-webkit-scrollbar-thumb
     background: darkslategrey;
 }
 
-/* Debit Cards */
+/* Debit/Credit Cards */
 
-.debit-card
+.debit-card,
+.credit-card
 {
     position: relative;
     transition: box-shadow 0.6s;
@@ -46,24 +47,28 @@ body::-webkit-scrollbar-thumb
     background-color: #1e3131;
 }
 
-.debit-card:hover
+.debit-card:hover,
+.credit-card:hover
 {
     cursor: pointer;
     box-shadow: 0 16px 12px 0 rgba(0,0,0,0.5);
 }
 
-.debit-description
+.debit-description,
+.credit-description
 {
     background-color: #1a548f;
     border-radius: 25px;
 }
 
-.debit-details
+.debit-details,
+.credit-details
 {
     text-align: left;
 }
 
-.debit-card-grid
+.debit-card-grid,
+.credit-card-grid
 {
     display: grid;
     gap: 2rem;
