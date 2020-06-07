@@ -6,6 +6,9 @@ import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import Login from './components/Login';
 
+/**
+ * This component will manage all the routings between pages
+ */
 export default class App extends Component 
 {
     constructor()

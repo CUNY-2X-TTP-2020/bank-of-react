@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import AccountBalance from './AccountBalance';
 import { Link } from 'react-router-dom';
 
+/**
+ * This component will be the homepage of the app, which will show the app's logo and name, along with
+ * a login button that redirects users to the Login page
+ */
 export default class Home extends Component
 {
     render()
