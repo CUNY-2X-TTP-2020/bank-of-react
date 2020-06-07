@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 
 import { Link } from 'react-router-dom';
 
+/**
+ * This component is where the user's profile is displayed, with information such as 
+ * user name and date since membership 
+ */
 export default class UserProfile extends Component
 {
     render()
