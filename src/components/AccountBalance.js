@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+/**
+ * This component displays the user's account balance
+ */
 export default class AccountBalance extends Component
 {
     render()
