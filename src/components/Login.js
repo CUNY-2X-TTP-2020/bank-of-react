@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 
 import { Redirect } from 'react-router-dom';
 
+/**
+ * This component will allow the user to login to their account.
+ * Upon successful login, they will be redirected to the UserProfile page.
+ * 
+ * For the sake of this example app, no real user accounts will be used, just a mockup function.
+ */
 export default class Login extends Component
 {
     constructor()
