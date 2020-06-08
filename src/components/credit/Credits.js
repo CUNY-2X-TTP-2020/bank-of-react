@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import { Link } from 'react-router-dom';
 
-import AccountBalance from './AccountBalance';
+import AccountBalance from '../AccountBalance';
 import CreditCard from './CreditCard';
 
 export default class Credits extends Component

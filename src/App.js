@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import axios from 'axios';
+import { v5 as uuidv5 } from 'uuid';
 
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import Login from './components/Login';
-import Debits from './components/Debits';
-import Credits from './components/Credits';
+import Debits from './components/debit/Debits';
+import Credits from './components/credit/Credits';
 
 /**
  * This component will manage all the routings between pages
@@ -92,6 +93,30 @@ export default class App extends Component
         this.setState({ currentUser: newUser });
     }
 
+    handleAddDebit = (event) =>
+    {
+        // Prevent browser refresh
+        event.preventDefault();
+
+        const debitDescription = event.target.description.value;
+        const debitAmount = event.target.amount.value;
+        const date = new Date().toISOString();
+        const id = uuidv5(date, 'addcd184-a939-11ea-a852-0f0463844a38');
+
+        let newDebit = 
+        {
+            id: id,
+            description: debitDescription,
+            amount: Number(debitAmount),
+            date: date,
+        }
+        let newDebitData = new Array(...this.state.debitData, newDebit);
+        this.setState({ debitData: newDebitData });
+        this.setState({ totalDebit: this.calculateTotalAmount(newDebitData) });
+
+        event.target.reset();
+    }
+
     render()
     {
         const HomeComponent = () => (<Home accountBalance={this.state.accountBalance} />);
@@ -99,7 +124,14 @@ export default class App extends Component
         (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince} />);
         const LoginComponent = () => (<Login user={this.state.currentUser} mockLogin={this.mockLogin} {...this.props} />);
 
-        const DebitComponent = () => (<Debits data={this.state.debitData} accountBalance={this.state.totalCredit - this.state.totalDebit} />);
+        const DebitComponent = () => 
+        (
+            <Debits 
+                data={this.state.debitData} 
+                accountBalance={this.state.totalCredit - this.state.totalDebit} 
+                addDebitHandler={this.handleAddDebit}
+            />
+        );
         const CreditComponent = () => (<Credits data={this.state.creditData} accountBalance={this.state.totalCredit - this.state.totalDebit} />);
 
         return (

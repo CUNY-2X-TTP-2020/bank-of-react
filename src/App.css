@@ -5,14 +5,18 @@
 
 .App-header 
 {
-    background-color: #282c34;
-    min-height: 100vh;
+    /* min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     font-size: calc(10px + 2vmin);
     color: white;
+}
+
+body
+{
+    background-color: #282c34;
 }
 
 /* Scroll Bar */
@@ -32,6 +36,74 @@ body::-webkit-scrollbar-thumb
     background: darkslategrey;
 }
 
+/* Buttons */
+
+button
+{
+    background-color: darkcyan;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: calc(10px + 1vmin);
+    padding: 10px;
+    margin: 20px 10px 0 10px;
+}
+
+button:hover
+{
+    background-color: lightseagreen;
+}
+
+button:active
+{
+    position: relative;
+    top: 2px;
+}
+
+button:active,
+button:focus
+{
+    outline: none;
+}
+
+fieldset
+{
+    border: thin solid gray;
+    width: 50%;
+    margin: auto;
+}
+
+legend
+{
+    padding: 0.5rem 2rem;
+    outline: thin solid gray;
+}
+
+/* Input Fields */
+
+input[type=text],
+input[type=number]
+{
+    padding: 10px;
+    border: medium solid #282c34;
+    border-radius: 10px;
+}
+
+input[type=text]:focus,
+input[type=number]:focus
+{
+    position: relative;
+    border: medium solid lightgreen;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=text]:active,
+input[type=number]:active
+{
+    outline: none;
+}
+
 /* Debit/Credit Cards */
 
 .debit-card,
@@ -44,6 +116,15 @@ body::-webkit-scrollbar-thumb
     border-radius: 25px;
     transition: 0.3s;
     padding: 2px 16px;
+}
+
+.debit-card
+{
+    background-color: #311e1e;
+}
+
+.credit-card
+{
     background-color: #1e3131;
 }
 
@@ -57,8 +138,17 @@ body::-webkit-scrollbar-thumb
 .debit-description,
 .credit-description
 {
-    background-color: #1a548f;
     border-radius: 25px;
+}
+
+.debit-description
+{
+    background-color: #8f581a;
+}
+
+.credit-description
+{
+    background-color: #1a548f;
 }
 
 .debit-details,
@@ -72,6 +162,6 @@ body::-webkit-scrollbar-thumb
 {
     display: grid;
     gap: 2rem;
-
-    margin: 2rem 0 5rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    margin: 2rem 2rem 5rem 2rem;
 }
