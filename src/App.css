@@ -5,7 +5,7 @@
 
 .App-header 
 {
-    font-size: calc(10px + 2vmin);
+    font-size: calc(10px + 1.5vmin);
     color: white;
 }
 
@@ -162,6 +162,6 @@ input:active
 {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    margin: 2rem 2rem 5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 2rem 4rem 4rem;
 }
