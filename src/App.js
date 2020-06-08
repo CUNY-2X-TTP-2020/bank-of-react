@@ -23,7 +23,7 @@ export default class App extends Component
         {
             currentUser:
             {
-                userName: 'bob_loblaw',
+                username: 'bob_loblaw',
                 memberSince: '08/23/99',
             },
             debitData: [],
@@ -89,7 +89,7 @@ export default class App extends Component
     mockLogin = (loginInfo) =>
     {
         const newUser = {...this.state.currentUser};
-        newUser.userName = loginInfo.userName;
+        newUser.username = loginInfo.username;
         this.setState({ currentUser: newUser });
     }
 
@@ -145,7 +145,7 @@ export default class App extends Component
     {
         const HomeComponent = () => (<Home accountBalance={this.state.accountBalance} />);
         const UserProfileComponent = () => 
-        (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince} />);
+        (<UserProfile username={this.state.currentUser.username} memberSince={this.state.currentUser.memberSince} />);
         const LoginComponent = () => (<Login user={this.state.currentUser} mockLogin={this.mockLogin} {...this.props} />);
 
         const DebitComponent = () => 

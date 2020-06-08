@@ -14,7 +14,7 @@ export default class UserProfile extends Component
             <div>
                 <h1>User Profile</h1>
 
-                <div>UserName: {this.props.userName}</div>
+                <div>UserName: {this.props.username}</div>
                 <div>Member Since: {this.props.memberSince}</div>
 
                 <Link to="/">Home</Link>
