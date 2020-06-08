@@ -18,10 +18,16 @@ export default class Debits extends Component
         return (
             <div>
                 <h1>Debits</h1>
-                <Link to="/">Home</Link>
+                <fieldset>
+                    <legend>Options</legend>
+
+                    <Link to="/userProfile"><button>My Profile</button></Link>
+                    <Link to="/credits"><button>View Credits</button></Link>
+                    <Link to="/"><button>Logout</button></Link>
+                </fieldset><br/>
 
                 <AccountBalance accountBalance={this.props.accountBalance} /><br/>
-
+                
                 <fieldset>
                     <legend>Add New Debit</legend>
                     <form onSubmit={this.handleSubmit}>
