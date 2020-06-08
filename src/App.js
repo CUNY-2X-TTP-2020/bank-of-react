@@ -20,14 +20,15 @@ export default class App extends Component
         super();
         this.state =
         {
-            accountBalance: 14568.27,
             currentUser:
             {
                 userName: 'bob_loblaw',
                 memberSince: '08/23/99',
             },
             debitData: [],
-            creditData: []
+            creditData: [],
+            totalDebit: -1,
+            totalCredit: -1
         }
     }
 
@@ -47,7 +48,7 @@ export default class App extends Component
             const debitData = response.data;
 
             this.setState({ debitData });
-            
+            this.setState({ totalDebit: this.calculateTotalAmount(debitData) });
         })
         .catch((error) =>
         {
@@ -66,13 +67,22 @@ export default class App extends Component
             const creditData = response.data;
 
             this.setState({ creditData });
-            
+            this.setState({ totalCredit: this.calculateTotalAmount(creditData) });
         })
         .catch((error) =>
         {
             console.log(error);
             this.setState({ creditData: [] });
         })
+    }
+
+    calculateTotalAmount(data)
+    {
+        return data.reduce((sum, current) =>
+        {
+            sum += current.amount;
+            return sum;
+        }, 0);
     }
 
     mockLogin = (loginInfo) =>
@@ -88,8 +98,9 @@ export default class App extends Component
         const UserProfileComponent = () => 
         (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince} />);
         const LoginComponent = () => (<Login user={this.state.currentUser} mockLogin={this.mockLogin} {...this.props} />);
-        const DebitComponent = () => (<Debits data={this.state.debitData} accountBalance={this.state.accountBalance} />);
-        const CreditComponent = () => (<Credits data={this.state.creditData} accountBalance={this.state.accountBalance} />);
+
+        const DebitComponent = () => (<Debits data={this.state.debitData} accountBalance={this.state.totalCredit - this.state.totalDebit} />);
+        const CreditComponent = () => (<Credits data={this.state.creditData} accountBalance={this.state.totalCredit - this.state.totalDebit} />);
 
         return (
             <Router>
