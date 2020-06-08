@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/bank-of-react/static/css/main.ab3d23ba.chunk.css",
-    "main.js": "/bank-of-react/static/js/main.b3c84911.chunk.js",
-    "main.js.map": "/bank-of-react/static/js/main.b3c84911.chunk.js.map",
+    "main.js": "/bank-of-react/static/js/main.f609920b.chunk.js",
+    "main.js.map": "/bank-of-react/static/js/main.f609920b.chunk.js.map",
     "runtime-main.js": "/bank-of-react/static/js/runtime-main.36cf4d5d.js",
     "runtime-main.js.map": "/bank-of-react/static/js/runtime-main.36cf4d5d.js.map",
-    "static/js/2.4950bdd2.chunk.js": "/bank-of-react/static/js/2.4950bdd2.chunk.js",
-    "static/js/2.4950bdd2.chunk.js.map": "/bank-of-react/static/js/2.4950bdd2.chunk.js.map",
+    "static/js/2.f5ca5adf.chunk.js": "/bank-of-react/static/js/2.f5ca5adf.chunk.js",
+    "static/js/2.f5ca5adf.chunk.js.map": "/bank-of-react/static/js/2.f5ca5adf.chunk.js.map",
     "index.html": "/bank-of-react/index.html",
-    "precache-manifest.465251e19bd08c3b92f3cfe91ec12785.js": "/bank-of-react/precache-manifest.465251e19bd08c3b92f3cfe91ec12785.js",
+    "precache-manifest.43d7b2e1b8bd23fbd975d95c11faeffc.js": "/bank-of-react/precache-manifest.43d7b2e1b8bd23fbd975d95c11faeffc.js",
     "service-worker.js": "/bank-of-react/service-worker.js",
     "static/css/main.ab3d23ba.chunk.css.map": "/bank-of-react/static/css/main.ab3d23ba.chunk.css.map",
-    "static/js/2.4950bdd2.chunk.js.LICENSE.txt": "/bank-of-react/static/js/2.4950bdd2.chunk.js.LICENSE.txt"
+    "static/js/2.f5ca5adf.chunk.js.LICENSE.txt": "/bank-of-react/static/js/2.f5ca5adf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.36cf4d5d.js",
-    "static/js/2.4950bdd2.chunk.js",
+    "static/js/2.f5ca5adf.chunk.js",
     "static/css/main.ab3d23ba.chunk.css",
-    "static/js/main.b3c84911.chunk.js"
+    "static/js/main.f609920b.chunk.js"
   ]
 }
