@@ -112,6 +112,7 @@ export default class App extends Component
         }
         let newDebitData = new Array(...this.state.debitData, newDebit);
         this.setState({ debitData: newDebitData });
+        this.setState({ totalDebit: this.calculateTotalAmount(newDebitData) });
 
         event.target.reset();
     }
