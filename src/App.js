@@ -108,11 +108,35 @@ export default class App extends Component
             id: id,
             description: debitDescription,
             amount: Number(debitAmount),
-            date: date,
+            date: date
         }
         let newDebitData = new Array(...this.state.debitData, newDebit);
         this.setState({ debitData: newDebitData });
         this.setState({ totalDebit: this.calculateTotalAmount(newDebitData) });
+
+        event.target.reset();
+    }
+
+    handleAddCredit = (event) =>
+    {
+        // Prevent browser refresh
+        event.preventDefault();
+
+        const debitDescription = event.target.description.value;
+        const debitAmount = event.target.amount.value;
+        const date = new Date().toISOString();
+        const id = uuidv5(date, 'addcd184-a939-11ea-a852-0f0463844a38');
+
+        let newCredit =
+        {
+            id: id,
+            description: debitDescription,
+            amount: Number(debitAmount),
+            date: date
+        }
+        let newCreditData = new Array(...this.state.creditData, newCredit);
+        this.setState({ creditData: newCreditData });
+        this.setState({ totalCredit: this.calculateTotalAmount(newCreditData) });
 
         event.target.reset();
     }
@@ -132,7 +156,14 @@ export default class App extends Component
                 addDebitHandler={this.handleAddDebit}
             />
         );
-        const CreditComponent = () => (<Credits data={this.state.creditData} accountBalance={this.state.totalCredit - this.state.totalDebit} />);
+        const CreditComponent = () => 
+        (
+            <Credits 
+                data={this.state.creditData} 
+                accountBalance={this.state.totalCredit - this.state.totalDebit} 
+                addCreditHandler={this.handleAddCredit}
+            />
+        );
 
         return (
             <Router>
