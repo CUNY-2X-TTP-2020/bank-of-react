@@ -117,6 +117,11 @@ export default class App extends Component
         event.target.reset();
     }
 
+    handleAddCredit = (event) =>
+    {
+
+    }
+
     render()
     {
         const HomeComponent = () => (<Home accountBalance={this.state.accountBalance} />);
@@ -132,7 +137,14 @@ export default class App extends Component
                 addDebitHandler={this.handleAddDebit}
             />
         );
-        const CreditComponent = () => (<Credits data={this.state.creditData} accountBalance={this.state.totalCredit - this.state.totalDebit} />);
+        const CreditComponent = () => 
+        (
+            <Credits 
+                data={this.state.creditData} 
+                accountBalance={this.state.totalCredit - this.state.totalDebit} 
+                addCreditHandler={this.handleAddCredit}
+            />
+        );
 
         return (
             <Router>

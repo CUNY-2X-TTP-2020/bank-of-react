@@ -10,6 +10,7 @@ export default class Credits extends Component
     constructor(props)
     {
         super(props);
+        this.handleSubmit = props.addCreditHandler.bind(this.handleSubmit);
     }
 
     render()
@@ -19,7 +20,21 @@ export default class Credits extends Component
                 <h1>Credits</h1>
                 <Link to="/">Home</Link>
 
-                <AccountBalance accountBalance={this.props.accountBalance} />
+                <AccountBalance accountBalance={this.props.accountBalance} /><br/>
+
+                <fieldset>
+                    <legend>Add New Credit</legend>
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor="description">Description: </label>
+                        <input type="text" name="description" placeholder="Item Name" required />
+                        <br/>
+                        <label htmlFor="amount">Amount (in USD): </label>
+                        <input type="number" min="0" step="0.01" name="amount" placeholder="9.99" required />
+                        <br/>
+                        <button type="submit">Submit</button>
+                    </form>
+                </fieldset>
+
                 <section className="credit-card-grid">
                     {this.generateCreditCards(this.props.data)}
                 </section>
