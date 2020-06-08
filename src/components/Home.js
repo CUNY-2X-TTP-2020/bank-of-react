@@ -16,7 +16,8 @@ export default class Home extends Component
                 <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/118/bank_1f3e6.png" alt="bank"/>
                 <h1>Bank of React</h1>
 
-                <Link to="/debits">Debits</Link>
+                <Link to="/debits">Debits</Link><br/>
+                <Link to="/credits">Credits</Link>
             </div>
         );
     }
