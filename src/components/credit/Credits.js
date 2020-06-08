@@ -18,7 +18,13 @@ export default class Credits extends Component
         return (
             <div>
                 <h1>Credits</h1>
-                <Link to="/">Home</Link>
+                <fieldset>
+                    <legend>Options</legend>
+
+                    <Link to="/userProfile"><button>My Profile</button></Link>
+                    <Link to="/debits"><button>View Debits</button></Link>
+                    <Link to="/"><button>Logout</button></Link>
+                </fieldset><br/>
 
                 <AccountBalance accountBalance={this.props.accountBalance} /><br/>
 
