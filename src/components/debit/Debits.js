@@ -14,7 +14,10 @@ export default class Debits extends Component
 
     handleSubmit = (event) =>
     {
-        
+        // Prevent browser refresh
+        event.preventDefault();
+
+        event.target.reset();
     }
 
     render()
@@ -24,15 +27,21 @@ export default class Debits extends Component
                 <h1>Debits</h1>
                 <Link to="/">Home</Link>
 
-                <AccountBalance accountBalance={this.props.accountBalance} />
+                <AccountBalance accountBalance={this.props.accountBalance} /><br/>
 
-                <form onSubmit={this.handleSubmit}>
-                    <label for="description">Description: </label>
-                    <input type="text" name="description" />
-                    <br/>
-                    <label for="amount">Amount (in USD): </label>
-                    <input type="number" min="0" step="0.01" name="amount" />
-                </form>
+                <fieldset>
+                    <legend>Add New Debit</legend>
+                    <form onSubmit={this.handleSubmit}>
+                        <label for="description">Description: </label>
+                        <input type="text" name="description" placeholder="Item Name" />
+                        <br/>
+                        <label for="amount">Amount (in USD): </label>
+                        <input type="number" min="0" step="0.01" name="amount" placeholder="9.99" />
+                        <br/>
+                        <button type="submit">Submit</button>
+                    </form>
+                </fieldset>
+                
 
                 <section className="debit-card-grid">
                     {this.generateDebitCards(this.props.data)}

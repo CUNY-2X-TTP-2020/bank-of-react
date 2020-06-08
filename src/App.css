@@ -120,5 +120,5 @@ input[type=number]:active
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    margin: 2rem;
+    margin: 2rem 2rem 5rem 2rem;
 }
