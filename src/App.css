@@ -66,6 +66,19 @@ button:focus
     outline: none;
 }
 
+fieldset
+{
+    border: thin solid gray;
+    width: 50%;
+    margin: auto;
+}
+
+legend
+{
+    padding: 0.5rem 2rem;
+    outline: thin solid gray;
+}
+
 /* Input Fields */
 
 input[type=text],
