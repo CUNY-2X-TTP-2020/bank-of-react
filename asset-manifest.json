@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bank-of-react/static/css/main.9b02b115.chunk.css",
+    "main.css": "/bank-of-react/static/css/main.2eb0bdf5.chunk.css",
     "main.js": "/bank-of-react/static/js/main.1b20bbcf.chunk.js",
     "main.js.map": "/bank-of-react/static/js/main.1b20bbcf.chunk.js.map",
     "runtime-main.js": "/bank-of-react/static/js/runtime-main.36cf4d5d.js",
@@ -8,15 +8,15 @@
     "static/js/2.7c40b48d.chunk.js": "/bank-of-react/static/js/2.7c40b48d.chunk.js",
     "static/js/2.7c40b48d.chunk.js.map": "/bank-of-react/static/js/2.7c40b48d.chunk.js.map",
     "index.html": "/bank-of-react/index.html",
-    "precache-manifest.6f7e3fc2812d6ba311271482374711d9.js": "/bank-of-react/precache-manifest.6f7e3fc2812d6ba311271482374711d9.js",
+    "precache-manifest.3730246e2d5ad0238ef4dbf231cd12f9.js": "/bank-of-react/precache-manifest.3730246e2d5ad0238ef4dbf231cd12f9.js",
     "service-worker.js": "/bank-of-react/service-worker.js",
-    "static/css/main.9b02b115.chunk.css.map": "/bank-of-react/static/css/main.9b02b115.chunk.css.map",
+    "static/css/main.2eb0bdf5.chunk.css.map": "/bank-of-react/static/css/main.2eb0bdf5.chunk.css.map",
     "static/js/2.7c40b48d.chunk.js.LICENSE.txt": "/bank-of-react/static/js/2.7c40b48d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.36cf4d5d.js",
     "static/js/2.7c40b48d.chunk.js",
-    "static/css/main.9b02b115.chunk.css",
+    "static/css/main.2eb0bdf5.chunk.css",
     "static/js/main.1b20bbcf.chunk.js"
   ]
 }
