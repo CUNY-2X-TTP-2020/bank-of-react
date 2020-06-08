@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import axios from 'axios';
+import { v5 as uuidv5 } from 'uuid';
 
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
@@ -99,6 +100,18 @@ export default class App extends Component
 
         const debitDescription = event.target.description.value;
         const debitAmount = event.target.amount.value;
+        const date = new Date().toISOString();
+        const id = uuidv5(date, 'addcd184-a939-11ea-a852-0f0463844a38');
+
+        let newDebit = 
+        {
+            id: id,
+            description: debitDescription,
+            amount: Number(debitAmount),
+            date: date,
+        }
+        let newDebitData = new Array(...this.state.debitData, newDebit);
+        this.setState({ debitData: newDebitData });
 
         event.target.reset();
     }
