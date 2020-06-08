@@ -9,7 +9,7 @@ export default class AccountBalance extends Component
     {
         return (
             <div>
-                Balance: ${this.props.accountBalance.toFixed(2)}
+                Balance: {this.props.accountBalance.toLocaleString("en-US", { style: "currency", currency: "USD" })}
             </div>
         );
     }
