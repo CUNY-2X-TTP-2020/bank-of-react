@@ -64,7 +64,6 @@ export default class Login extends Component
                         <Link to="/"><button type="reset">Go Back</button></Link>
                         <button type="submit">Login</button>
                     </form>
-                    
                 </fieldset>
             </div>
         );

@@ -85,25 +85,21 @@ legend
 
 /* Input Fields */
 
-input[type=text],
-input[type=number]
+input
 {
     padding: 10px;
     border: medium solid #282c34;
     border-radius: 10px;
 }
 
-input[type=text]:focus,
-input[type=number]:focus
+input:focus
 {
     position: relative;
     border: medium solid lightgreen;
 }
 
-input[type=text]:focus,
-input[type=number]:focus,
-input[type=text]:active,
-input[type=number]:active
+input:focus,
+input:active
 {
     outline: none;
 }
