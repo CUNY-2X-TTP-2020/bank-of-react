@@ -10,14 +10,7 @@ export default class Debits extends Component
     constructor(props)
     {
         super(props);
-    }
-
-    handleSubmit = (event) =>
-    {
-        // Prevent browser refresh
-        event.preventDefault();
-
-        event.target.reset();
+        this.handleSubmit = props.addDebitHandler.bind(this.handleSubmit);
     }
 
     render()
@@ -32,11 +25,11 @@ export default class Debits extends Component
                 <fieldset>
                     <legend>Add New Debit</legend>
                     <form onSubmit={this.handleSubmit}>
-                        <label for="description">Description: </label>
-                        <input type="text" name="description" placeholder="Item Name" />
+                        <label htmlFor="description">Description: </label>
+                        <input type="text" name="description" placeholder="Item Name" required />
                         <br/>
-                        <label for="amount">Amount (in USD): </label>
-                        <input type="number" min="0" step="0.01" name="amount" placeholder="9.99" />
+                        <label htmlFor="amount">Amount (in USD): </label>
+                        <input type="number" min="0" step="0.01" name="amount" placeholder="9.99" required />
                         <br/>
                         <button type="submit">Submit</button>
                     </form>
