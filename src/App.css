@@ -36,6 +36,36 @@ body::-webkit-scrollbar-thumb
     background: darkslategrey;
 }
 
+/* Buttons */
+
+button
+{
+    background-color: darkcyan;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: calc(10px + 1vmin);
+    padding: 10px;
+    margin: 20px 10px 0 10px;
+}
+
+button:hover
+{
+    background-color: lightseagreen;
+}
+
+button:active
+{
+    position: relative;
+    top: 2px;
+}
+
+button:active,
+button:focus
+{
+    outline: none;
+}
+
 /* Input Fields */
 
 input[type=text],
