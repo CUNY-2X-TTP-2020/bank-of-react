@@ -12,6 +12,11 @@ export default class Debits extends Component
         super(props);
     }
 
+    handleSubmit = (event) =>
+    {
+        
+    }
+
     render()
     {
         return (
@@ -20,6 +25,15 @@ export default class Debits extends Component
                 <Link to="/">Home</Link>
 
                 <AccountBalance accountBalance={this.props.accountBalance} />
+
+                <form onSubmit={this.handleSubmit}>
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" />
+                    <br/>
+                    <label for="amount">Amount (in USD): </label>
+                    <input type="number" min="0" step="0.01" name="amount" />
+                </form>
+
                 <section className="debit-card-grid">
                     {this.generateDebitCards(this.props.data)}
                 </section>
