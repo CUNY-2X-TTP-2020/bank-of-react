@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 
 import { Link } from 'react-router-dom';
 
-import AccountBalance from './AccountBalance';
-import CreditCard from './CreditCard';
+import AccountBalance from '../AccountBalance';
+import DebitCard from './DebitCard';
 
-export default class Credits extends Component
+export default class Debits extends Component
 {
     constructor(props)
     {
@@ -16,18 +16,18 @@ export default class Credits extends Component
     {
         return (
             <div>
-                <h1>Credits</h1>
+                <h1>Debits</h1>
                 <Link to="/">Home</Link>
 
                 <AccountBalance accountBalance={this.props.accountBalance} />
-                <section className="credit-card-grid">
-                    {this.generateCreditCards(this.props.data)}
+                <section className="debit-card-grid">
+                    {this.generateDebitCards(this.props.data)}
                 </section>
             </div>
         );
     }
 
-    generateCreditCards(data)
+    generateDebitCards(data)
     {
         let cards = [];
 
@@ -38,7 +38,7 @@ export default class Credits extends Component
             const id = element.id;
             const date = element.date;
 
-            cards.push(<CreditCard 
+            cards.push(<DebitCard 
                 key={index.toString()}
                 description={description}
                 amount={amount}

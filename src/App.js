@@ -7,8 +7,8 @@ import axios from 'axios';
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import Login from './components/Login';
-import Debits from './components/Debits';
-import Credits from './components/Credits';
+import Debits from './components/debit/Debits';
+import Credits from './components/credit/Credits';
 
 /**
  * This component will manage all the routings between pages
